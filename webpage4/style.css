@@ -1,0 +1,299 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.header{
+    background-color: rgb(237, 237, 132);
+}
+.header-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.eng{border-radius: 13px; color:black; border-style: none;}
+.links{
+    list-style: none;
+   /* border: 1px solid black;*/
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap:3rem;
+}
+.ticket, .button2{
+    border-style: none;
+    background-color: black;
+    color: rgb(248, 248, 100);
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+}
+.special{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first-logo{
+ /*   border: 1px solid black;*/
+    width: 100px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.main-header{
+  /*  border: 1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+}
+h1, h2{
+   /* border: 1px solid black;*/
+    width: 800px;
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -5px;
+    margin-left: -40px;
+}
+img{
+    width: 350px;
+    height: 400px;
+    scale: .8; opacity: 0;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: contain;
+}
+@keyframes fade-in{to{scale: 1; opacity: 1;}}
+.body-scroll{
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;;
+}
+@keyframes slide{
+    from{
+        transform: translateX(0)
+    }
+    to{transform: translate(-100%)}
+}
+.body-scroll:hover .image-slide{
+    animation-play-state: paused;
+}
+.image-slide{
+    display: inline-block;
+    animation: 10s slide infinite linear;
+}
+.image-slide img{
+ height: 300px;
+ width: 300px;
+ margin: 0 40px;
+}
+
+.permanent{
+    text-align: center;
+}
+.main-body{
+    background-color: rgb(136, 69, 69);
+}
+video{
+    width:600px;
+    height: 500px;
+    margin-left: 100px;
+}
+.zoot{
+    width:50px;
+    height: 50px;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hof{
+    display: flex;
+    justify-content: space-between;
+}
+.sep-video, .locations{
+    display: flex;
+    justify-content: space-around;
+}
+h6, .welcome{
+    text-align: center;
+}
+.museum{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.near-end{
+    background-color: rgb(172, 82, 49);
+}
+.welcome{
+    width: 500px;
+}
+.footer-links, .footer-link{
+    display: flex;
+}
+.footer-link{
+    justify-content: space-evenly;
+    padding: 40px;
+    
+}
+.footer-links{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem
+}
+.footer{
+    height: 400px;
+    background-color: rgb(237, 237, 132);
+}
+input{
+    border-radius: 13px;
+    border-style: none;
+    height: 25px;
+    padding: 10px;
+}
+.button3{
+    border-radius: 13px;
+    height: 50px;
+    width: 100px;
+    border-style: none;
+    background-color: rgb(232, 232, 142);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+.butto3{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+button:hover{
+  background-color: blue;
+}
+.si{
+    height: 150px;
+    width: 150px;
+}
+.birm{
+    text-align: center;
+    font-weight: lighter;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* images fading in the entry and exit of the page
+@media(prefers-reduced-motion: no-preference){
+img{
+    scale: .8; opacity: 0;
+   animation: fade-in linear;
+   animation-timeline: view();
+   animation-range: contain;
+}
+
+@keyframes fade-in{
+    
+    to{ scale: 1; opacity: 1;}  
+}
+}
+*/
+/*schrolling div from left to rifht or opposite
+.schroller[data-animated="true"]{
+    overflow: hidden;
+    overflow-x: scroll;
+    -webkit-mask: linear-gradient(
+        90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+    )
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent)
+}
+.schroller[data-animated="true"]{
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scrolling linear;
+animation: scroll 20s linear;
+    animation: bg-shift linear;
+    animation-timeline: scroll(root)
+}
+.schroller[data-animated="true"]{
+    animation-direction: reverse;
+}
+@keyFrames bg-shift{
+    from{color: blue;}
+    to{color: red;}
+}
+@keyfframes schroll{
+    to{
+    tranform: translate(calc(-50% - 0.5rem)(-100%, -50%));
+    }
+*/
+/*header movements in th webpage
+.article-header{
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 100svh;
+    overflow-x: clip;
+    padding-block: 7rem;
+    margin-block-end: 3rem;
+
+    
+}
+.header-content{
+    animation: fade-out linear;
+    animation-timeline: view();
+    animation-range: exit -200px;
+    border: 2px solid yellow;
+}
+.header-image{
+    grid-column: 1 / -1;
+    position: absolute;
+    inset: 0;
+    width: 100px;
+    height: 100px;
+    opacity: 0.5;
+    object-fit: cover;
+    z-index: -1;
+
+    transform-origin: bottom;
+
+    animation: header-image-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+}
+@keyframes fade-out{
+    to{opacity: 0; }
+}
+
+@keyframes header-image-animation{
+    25%{opacity:1;}
+    85%, 100%{opacity: 0;}
+}
+*/
